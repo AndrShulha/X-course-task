@@ -10,7 +10,7 @@ export const BooksProvider = ({ children }) => {
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const response = await fetch('/X-course-task/books.json');
+        const response = await fetch('books.json');
         const data = await response.json();
         setBooks(data.books);
       } catch (error) {
