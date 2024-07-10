@@ -1,0 +1,44 @@
+@import 'src/assets/scss/_variables';
+@import 'src/assets/scss/_mixins';
+
+.books {
+  padding: 60px var(--pading-horizontal);
+
+  &__list {
+    --gap: 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+  }
+
+  &__item {
+    flex: 0 0 calc(25% - 3 * var(--gap) / 4);
+
+    @include desktop {
+      flex: 0 0 calc(33.33% - 2 * var(--gap) / 3);
+    }
+
+    @include tablet {
+      flex: 0 0 calc(50% - var(--gap) / 2);
+    }
+
+    @include phone {
+      flex: 0 0 100%;
+    }
+  }
+
+  &__filter {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    @include phone {
+      flex-wrap: wrap;
+    }
+  }
+}

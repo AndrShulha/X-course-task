@@ -1,0 +1,24 @@
+@import 'src/assets/scss/_variables';
+@import 'src/assets/scss/_mixins';
+
+.search {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 5px;
+
+  &__input {
+    padding: 3px 15px;
+
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: $text-color;
+
+    border-radius: 5px;
+    border: 0;
+  }
+
+  &__btn {
+    width: 30px;
+    height: 30px;
+  }
+}

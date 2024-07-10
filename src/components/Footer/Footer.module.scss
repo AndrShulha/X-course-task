@@ -1,0 +1,15 @@
+@import 'src/assets/scss/_variables';
+@import 'src/assets/scss/_mixins';
+
+.footer {
+  display: flex;
+  justify-content: center;
+
+  padding: 10px;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2;
+  }
+}

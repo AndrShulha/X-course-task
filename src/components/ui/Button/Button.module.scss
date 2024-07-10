@@ -1,0 +1,89 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+
+.btn {
+  border: 0;
+
+  vertical-align: baseline;
+  box-sizing: border-box;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.3;
+  }
+
+  &--modeSize1 {
+    padding: 13px 21px;
+
+    border-radius: 5px;
+  }
+
+  &--modColorPrime {
+    @include hover($color: $color-white, $bg_color: $link-hover-color);
+
+    color: $color-white;
+    background-color: $accept-color;
+  }
+
+  &--iconSize {
+    position: relative;
+
+    width: 60px;
+    height: 60px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &--iconSize2 {
+    position: relative;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 5px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &--iconSize3 {
+    position: relative;
+
+    width: 1.4em;
+    height: 1.4em;
+
+    padding: .2em;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &--iconColor {
+    @include hover($color: $link-hover-color);
+
+    color: $text-color;
+
+    svg {
+      fill: currentColor;
+    }
+  }
+
+  &--full_width {
+    width: 100%;
+  }
+}

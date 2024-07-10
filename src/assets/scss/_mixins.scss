@@ -1,0 +1,90 @@
+@import 'src/assets/scss/variables';
+
+@mixin phone {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin flex_block(
+  $flex-direction: row,
+  $flex-wrap: wrap,
+  $content: space-between,
+  $align-items: flex-start,
+  $align-content: flex-start
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  flex-wrap: $flex-wrap;
+  justify-content: $content;
+  align-content: $align-content;
+  align-items: $align-items;
+}
+
+@mixin transition_background {
+  transition: background $transition;
+  will-change: background;
+}
+
+@mixin transition_color {
+  transition: color $transition;
+  will-change: color;
+}
+
+@mixin transition_color_background {
+  transition:
+    color $transition,
+    background $transition;
+  will-change: color, background;
+}
+
+@mixin transition_transform {
+  transition: transform $transition;
+  will-change: transform;
+}
+
+@mixin tranisition_fill {
+  transition: fill $transition;
+  will-change: fill;
+}
+
+@mixin transition_color_transform {
+  transition:
+    color $transition,
+    transform $transition;
+  will-change: color, transform;
+}
+
+@mixin transition_color_transform_background {
+  transition:
+    color $transition,
+    transform $transition,
+    background $transition;
+  will-change: transform, color, background;
+}
+
+@mixin hover($color: $link-hover-color, $bg_color: transparent, $scale: 0.9) {
+  @include transition_color_transform_background;
+
+  @media (any-hover: hover) {
+      &:hover {
+      color: $color;
+      background-color: $bg_color;
+    }
+  }
+
+  &:active {
+    transform: scale($scale);
+  }
+}

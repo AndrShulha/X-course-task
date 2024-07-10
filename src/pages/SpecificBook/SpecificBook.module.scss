@@ -1,0 +1,99 @@
+@import 'src/assets/scss/_variables';
+@import 'src/assets/scss/_mixins';
+
+.book {
+  padding: 60px var(--pading-horizontal);
+
+  &__row {
+    --gap: 20px;
+    display: flex;
+    gap: var(--gap);
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__img {
+    aspect-ratio: 125 / 164;
+  }
+
+  &__img,
+  &__info {
+    flex: 0 0 calc(33.33% - 2 * var(--gap) / 3);
+
+    @include tablet {
+      flex: 0 0 calc(50% - var(--gap) / 2);
+    }
+
+    @include phone {
+      flex: 0 0 100%;
+    }
+  }
+
+  &__order {
+    flex: 0 0 calc(33.33% - 2 * var(--gap) / 3);
+
+    @include tablet {
+      flex: 0 0 70%;
+    }
+
+    @include phone {
+      flex: 0 0 100%;
+    }
+
+    &_row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 1.5;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__pic {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.5;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__author {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.5;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text,
+  &__descr {
+    font-size: 1.2rem;
+    line-height: 1.3;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}

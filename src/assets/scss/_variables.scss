@@ -1,0 +1,17 @@
+$color-white: #ffffff;
+$color-black: #000000;
+
+$primary-color: #556766;
+$secondary-color: #cbcaca;
+$accept-color: #FF7A50;
+
+$bg: #f3f3f3;
+$text-color: $primary-color;
+$text-color-disable: lighten($text-color, 10%);
+$link-color: $accept-color;
+
+$link-hover-color: darken($link-color, 10%);
+
+$border: 1px solid #f0f0f0;
+
+$transition: linear 0.3s;

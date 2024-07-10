@@ -1,0 +1,32 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+
+.filed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &::placeholder {
+    color: $text-color-disable;
+  }
+
+  &__text {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 13px 21px;
+
+    color: $text-color;
+    text-align: center;
+
+    border: none;
+    border-radius: 5px;
+  }
+}

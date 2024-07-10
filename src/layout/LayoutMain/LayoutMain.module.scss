@@ -1,0 +1,12 @@
+@import 'src/assets/scss/_variables';
+@import 'src/assets/scss/_mixins';
+
+.main {
+  flex-grow: 1;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}

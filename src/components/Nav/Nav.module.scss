@@ -1,0 +1,8 @@
+@import 'src/assets/scss/_variables';
+@import 'src/assets/scss/_mixins';
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}

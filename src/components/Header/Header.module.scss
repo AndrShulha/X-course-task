@@ -1,0 +1,36 @@
+@import 'src/assets/scss/_variables';
+@import 'src/assets/scss/_mixins';
+
+.header {
+  padding: 10px;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    gap: 10px;
+
+    @include phone {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2;
+
+    @include phone {
+      width: 100%;
+    }
+  }
+
+  &__nav {
+    margin-left: auto;
+
+    @include phone {
+      margin-left: 0;
+    }
+  }
+}
